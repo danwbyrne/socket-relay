@@ -1,0 +1,11 @@
+{
+  "name": "Socket Relay",
+  "version": "0.1",
+  "description": "Local Browser Socket Relay",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background/index.js"
+    ]
+  }
+}
