@@ -14,8 +14,11 @@ export class SocketListener {
   }
 
   public start() {
-    chrome.devtools.network.onRequestFinished.addListener((request) => {
-      console.log(request);
+    chrome.webRequest.onCompleted.addListener((details) => {
+      console.log(details);
+    }, {
+      types: ['websocket'],
+      urls: ['<all_urls>']
     })
   }
 }
